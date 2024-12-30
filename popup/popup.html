@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Local PrintJS -->
+  <script src="../node_modules/print-js/dist/print.js"></script>
+  <link rel="stylesheet" href="../node_modules/print-js/dist/print.css">
+  <!-- Custom print styles -->
+  <link rel="stylesheet" href="../styles/print.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Web Element PDF Generator</h2>
+    <div class="site-status">
+      <i class="fas fa-circle-info"></i>
+      <span id="status-text">Select an element to generate PDF</span>
+    </div>
+    <div class="buttons">
+      <button id="generate-pdf" class="btn primary" disabled>
+        <i class="fas fa-file-pdf"></i>
+        Generate PDF
+      </button>
+      <button id="select-element" class="btn secondary">
+        <i class="fas fa-mouse-pointer"></i>
+        Select Element
+      </button>
+    </div>
+    <div class="footer">
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

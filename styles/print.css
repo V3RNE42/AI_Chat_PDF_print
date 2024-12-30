@@ -1,0 +1,98 @@
+/* Print styles for printJS */
+@media print {
+  /* Default styles */
+  body {
+    margin: 0;
+    padding: 20px;
+    background: white;
+    color: black;
+  }
+
+  /* Typography */
+  * {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  /* Content styling */
+  p, div, span {
+    page-break-inside: avoid;
+    margin-bottom: 10px;
+  }
+
+  /* Links */
+  a {
+    text-decoration: none;
+    color: #0066cc;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* Code blocks */
+  pre, code {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    page-break-after: avoid;
+  }
+
+  /* Lists */
+  ul, ol {
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+
+  /* Remove unnecessary elements */
+  .no-print,
+  button,
+  .pdf-highlight {
+    display: none !important;
+  }
+}
+
+/* Visual highlight for selected element */
+.pdf-highlight {
+  outline: 3px solid #007bff !important;
+  outline-offset: 2px !important;
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    outline-color: #007bff;
+  }
+  50% {
+    outline-color: #28a745;
+  }
+  100% {
+    outline-color: #007bff;
+  }
+}
